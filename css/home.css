@@ -1,0 +1,145 @@
+/* Style for the top picture */
+.top-picture {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+    .top-picture img {
+        width: 100%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px; /* Adjust height as needed */
+        object-fit: cover; /* Cover the area */
+        display: block; /* Remove any space below the image */
+    }
+
+/* Container for the content below the picture */
+.content-container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between sections */
+    align-items: stretch; /* Stretch sections to the same height */
+    padding: 10px; /* Padding around content */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+}
+
+/* Style for each section */
+.section {
+    display: flex; /* Flexbox layout for centering content */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 45%; /* Adjust width as needed */
+    padding: 20px; /* Padding around each section */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for better visibility */
+}
+
+/* Additional styling for text and images within sections */
+.left-section h2,
+.left-section p,
+.right-section img {
+    margin: 0; /* Remove default margins */
+    text-align: center; /* Center text within the section */
+}
+.section h2 {
+    font-size: 2rem; /* Font size for larger screens */
+    color: rgb(0, 107, 204); /* Color matching your theme */
+    margin-bottom: 10px; /* Space below the heading */
+    text-align: center; /* Center align the heading text */
+    font-weight: bold; /* Make the text bold */
+}
+.textmarie {
+    text-align: left; /* This ensures all <p> elements are aligned to the left */
+    margin: 0 0 10px 0; /* Optional: add space below each paragraph */
+    line-height: 1.6; /* Optional: improve readability with line-height */
+}
+
+
+
+.right-section img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure image doesn't exceed container height */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center; /* Center content horizontally */
+    }
+
+    .section {
+        width: 100%; /* Full width on small screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+        .section h2 {
+            font-size: 1.5rem; /* Smaller font size for smaller screens */
+            margin-bottom: 8px; /* Reduced space below heading on smaller screens */
+        }
+
+    .top-picture img {
+        max-height: 200px; /* Adjust height for smaller screens */
+    }
+}
+/* Carousel container */
+.carousel {
+    position: relative;
+    width: 100%; /* Full width of the content area */
+    max-width: 800px; /* Max width for larger screens */
+    margin: 20px auto; /* Center it with reduced margin */
+    overflow: hidden; /* Hide overflow to ensure only one image is visible */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow */
+}
+
+/* Container for images */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+    /* Each image takes up the full width of the carousel */
+    .carousel-images img {
+        width: 100%; /* Full width of the carousel */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below images */
+    }
+
+/* Navigation buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons are on top */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Style for the alert box */
+.alert-box {
+    padding: 15px;
+    background-color: #f44336; /* Red background for the alert */
+    color: white; /* White text */
+    margin-bottom: 10px; /* Some spacing below the alert */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for the alert */
+    text-align: center; /* Center the text */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%; /* Ensure the carousel is full width on smaller screens */
+    }
+}

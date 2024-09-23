@@ -1,0 +1,45 @@
+h1 {
+    color: rgb(0, 107, 204); /* Use taskbar color */
+    font-size: 2.5rem; /* Keep it bold and large */
+    text-align: center; /* Center the heading */
+    font-family: 'Arial', sans-serif; /* Clean and simple font */
+    margin-top: 20px; /* Add a bit of space above */
+    margin-bottom: 20px; /* Add space below */
+    font-weight: 600; /* Slightly bold */
+}
+
+.container {
+    padding: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+    }
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .gallery-item {
+        margin-bottom: 1.5rem; /* Space between items for medium screens */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .gallery-item {
+        margin-bottom: 1rem; /* Space between items for small screens */
+    }
+}
